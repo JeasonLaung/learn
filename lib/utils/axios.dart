@@ -1,10 +1,11 @@
 import 'package:dio/dio.dart';
- 
+import '../config/index.dart';
+
 class BaseUrl{
   // 配置默认请求地址
-  static const String url = 'http://127.0.0.1';
+  static const String url = BASE_HOST;
 }
- 
+
 class HttpUtil{
   static void get(
     String url,

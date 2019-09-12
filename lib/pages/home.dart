@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import '../config/index.dart';
+import '../components/button.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -53,6 +54,9 @@ class _HomePageState extends State<HomePage> {
                 showText,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
+              ),
+              primaryButton(
+                "点击我"
               )
             ],
           ),
@@ -65,15 +69,15 @@ class _HomePageState extends State<HomePage> {
   
 
   Future getHttp () async {
-    try{
-      Response response;
-      response = await Dio().get(BASE_HOST,
-        'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOjE3MDg2fQ.kMlHmMSCK3rvQ5j2f3EBaFqwxbVHi6x1NChtXjU-0tIQ_43BJTKXiKIFVMDBaoI7HjNCzLEI_EdCnB-4oxyufC-PpnXOcq6Bc1sdu90BgoHqLJ3oC79iKT5hcNG4YpIfGsfxjtC6A9djB8SSS6V4veIsn-I21QzHTfBPJtgRPGw'
-      );
-      return print(response);
-    } catch(e){
-      return print(e);
-    }
+    // try{
+    //   Response response;
+    //   response = await Dio().get(BASE_HOST,
+    //     'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOjE3MDg2fQ.kMlHmMSCK3rvQ5j2f3EBaFqwxbVHi6x1NChtXjU-0tIQ_43BJTKXiKIFVMDBaoI7HjNCzLEI_EdCnB-4oxyufC-PpnXOcq6Bc1sdu90BgoHqLJ3oC79iKT5hcNG4YpIfGsfxjtC6A9djB8SSS6V4veIsn-I21QzHTfBPJtgRPGw'
+    //   );
+    //   return print(response);
+    // } catch(e){
+    //   return print(e);
+    // }
   }
 }
 // class HomePage extends StatelessWidget {
